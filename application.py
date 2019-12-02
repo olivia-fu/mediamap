@@ -30,7 +30,14 @@ Session(app)
 
 @app.route("/")
 def initialmap():
-    if request.method == "GET":
-        folium_map = folium.Map(location = [36.2048, 139.2529])
-        folium_map.save("templates/my_map.html")
-        return render_template("my_map.html")
+    folium_map = folium.Map(location = [36.2048, 139.2529], zoom_start = 7)
+    folium_map.save("templates/my_map.html")
+
+    #attempted to add location marker
+    folium.Marker(
+    location=[35.6762, 139.6503],
+    popup='Tokyo',
+    icon=folium.Icon()
+    ).add_to(folium_map)
+
+    return render_template("my_map.html")
