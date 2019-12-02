@@ -28,9 +28,9 @@ Session(app)
 
 # db = SQL("TODO")
 
+folium_map = folium.Map(location = [34.6937, 135.5023], zoom_start = 7)
+
 @app.route("/")
 def initialmap():
-    if request.method == "GET":
-        folium_map = folium.Map(location = [36.2048, 139.2529])
-        folium_map.save("templates/my_map.html")
-        return render_template("my_map.html")
+    folium_map.save("templates/my_map.html")
+    return render_template("my_map.html")
