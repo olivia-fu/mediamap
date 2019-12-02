@@ -12,6 +12,8 @@ from tempfile import mkdtemp
 from werkzeug.exceptions import default_exceptions, HTTPException, InternalServerError
 from werkzeug.security import check_password_hash, generate_password_hash
 
+folium_map = folium.Map(location = [34.6937, 135.5023], zoom_start = 7)
+
 def spefcity():
     #attempted to add location marker
     folium.Marker(
@@ -29,7 +31,13 @@ def trackpop():
     tourist_data.head()
 
     for index, row in tourist_data.iterrows():
-        folium.CircleMarker(location=[row['Longitude'], row['Latitude']], popup=row['Prefecture'], radius=10*row['2017'], color='#3186cc', fill=True, fill_color='#3186cc').add_to(folium_map)
+        folium.CircleMarker(
+            location=[row['Longitude'], row['Latitude']],
+            popup=row['Prefecture'],
+            radius=10*row['2017'],
+            color='#3186cc',
+            fill=True,
+            fill_color='#3186cc').add_to(folium_map)
 
     folium_map.save("templates/my_map.html")
     return render_template("my_map.html")
