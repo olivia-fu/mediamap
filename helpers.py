@@ -29,7 +29,7 @@ def trackpop():
     tourist_data.head()
 
     for index, row in tourist_data.iterrows():
-        folium.CircleMarker(location=location, popup=row['Prefecture'], radius=10*row['2017'], color='#3186cc', fill=True, fill_color='#3186cc').add_to(folium_map)
+        folium.CircleMarker(location=[row['Longitude'], row['Latitude']], popup=row['Prefecture'], radius=10*row['2017'], color='#3186cc', fill=True, fill_color='#3186cc').add_to(folium_map)
 
     folium_map.save("templates/my_map.html")
     return render_template("my_map.html")
