@@ -28,16 +28,9 @@ Session(app)
 
 # db = SQL("TODO")
 
+folium_map = folium.Map(location = [34.6937, 135.5023], zoom_start = 7)
+
 @app.route("/")
 def initialmap():
-    folium_map = folium.Map(location = [36.2048, 139.2529], zoom_start = 7)
     folium_map.save("templates/my_map.html")
-
-    #attempted to add location marker
-    folium.Marker(
-    location=[35.6762, 139.6503],
-    popup='Tokyo',
-    icon=folium.Icon()
-    ).add_to(folium_map)
-
     return render_template("my_map.html")
