@@ -10,6 +10,8 @@ from tempfile import mkdtemp
 from werkzeug.exceptions import default_exceptions, HTTPException, InternalServerError
 from werkzeug.security import check_password_hash, generate_password_hash
 
+from helpers import trackpop
+
 app = Flask(__name__)
 
 app.config["TEMPLATES_AUTO_RELOAD"] = True
@@ -33,4 +35,5 @@ folium_map = folium.Map(location = [34.6937, 135.5023], zoom_start = 7)
 @app.route("/")
 def initialmap():
     folium_map.save("templates/my_map.html")
+    trackpop()
     return render_template("my_map.html")
