@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Welcome!
+{% endblock %}
+
+{% block main %}
+
+    <form action="/" method="post">
+
+        <div class="jumbotron" style="background:rgba(255,255,255,0.9)">
+            <h1 class="display-4">Welcome to our Media Tourism Map!</h1>
+            <p class="lead">We are Yejin and Olivia, and this is our joint research project between CS50 and East Asian Media Studies at Harvard. We sought to understand the connection between media representation in anime films and tourism to featured locations in Japan, and explored data visualization techniques to map out our findings.</p>
+            <hr class="my-4">
+            <p>Our maps can be viewed either by tourism numbers or significant film releases over the past years.</p>
+            <p class="lead">
+            <a class="btn btn-primary btn-info" href="/year" role="button">See map of tourism statistics by year.</a>
+            <br><br>
+            <a class="btn btn-primary btn-sucess" href="/movie" role="button">See map of popular film releases.</a>
+            </p>
+        </div>
+
+    </form>
+{% endblock %}

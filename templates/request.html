@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Feedback
+{% endblock %}
+
+{% block main %}
+    <div class="card" style="width: 65rem; background:rgba(255,255,255,0.9)">
+
+    <div class="card-body">
+    <h5 class="card-title">Thanks for visiting!</h5>
+
+    <form action="/request">
+    <p class="card-text">We would love to hear your comments, questions, and ideas for information you'd like to see next - let us know below.</p>
+    <div class="form-group">
+        <input class="form-control" name="comment" placeholder="Type here" type="text">
+    </div>
+    <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+    </div>
+
+    </div>
+{% endblock %}
