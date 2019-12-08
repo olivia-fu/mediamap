@@ -3,9 +3,6 @@ import os
 import folium
 from folium import plugins
 
-import time
-from selenium import webdriver
-
 import pandas as pd
 
 from cs50 import SQL
