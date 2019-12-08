@@ -38,6 +38,10 @@ folium_map = folium.Map(location= [34.6937, 135.5023], zoom_start= 7)
 def choose_std():
     return render_template("standard.html")
 
+@app.route("/dtable", methods = ["GET"])
+def choose_dtable():
+    return render_template("dtable.html")
+
 @app.route("/year", methods = ["GET", "POST"])
 def template():
     if request.method == "GET":
@@ -123,7 +127,6 @@ def resultmap():
                 fill_color='#cc3131').add_to(folium_map)
         folium_map.save("templates/my_map.html")
         return render_template("my_map.html")
-
 
 @app.route("/request", methods=["GET"])
 def moreinfo():

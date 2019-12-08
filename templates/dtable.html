@@ -1,0 +1,729 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Datatable
+{% endblock %}
+
+{% block main %}
+<html>
+	<head>
+		<meta charset='UTF-8'>
+			<title>CSV To HTML using codebeautify.org</title>
+		</head>
+		<body>
+		    <form action="/" method="post">
+            <div class="jumbotron" style="background:rgba(255,255,255,0.9)">
+            <h3>Data by influential anime films</h3>
+			<table border=1>
+				<thead>
+					<tr>
+						<th>Film</th>
+						<th>Year</th>
+						<th>Longitude</th>
+						<th>Latitude</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Spirited Away</td>
+						<td>2001</td>
+						<td>25.1092</td>
+						<td>121.8463</td>
+					</tr>
+					<tr>
+						<td>Your Name</td>
+						<td>2016</td>
+						<td>35.6854</td>
+						<td>139.7224</td>
+					</tr>
+					<tr>
+						<td>Howl's Moving Castle</td>
+						<td>2004</td>
+						<td>48.0794</td>
+						<td>7.3585</td>
+					</tr>
+					<tr>
+						<td>Princess Mononoke</td>
+						<td>1997</td>
+						<td>30.3552</td>
+						<td>130.5238</td>
+					</tr>
+					<tr>
+						<td>Ponyo</td>
+						<td>2008</td>
+						<td>34.3829</td>
+						<td>133.3812</td>
+					</tr>
+					<tr>
+						<td>Weathering With You</td>
+						<td>2019</td>
+						<td>35.6938</td>
+						<td>139.7034</td>
+					</tr>
+					<tr>
+						<td>The Wind Rises</td>
+						<td>2013</td>
+						<td>36.2428</td>
+						<td>137.6285</td>
+					</tr>
+					<tr>
+						<td>Detective Conan: The Fist of Blue Sapphire</td>
+						<td>2019</td>
+						<td>1.3521</td>
+						<td>103.8198</td>
+					</tr>
+					<tr>
+						<td>The Secret World of Arrietty</td>
+						<td>2010</td>
+						<td>40.6169</td>
+						<td>140.5699</td>
+					</tr>
+					<tr>
+						<td>Detective Conan: Zero the Enforcer</td>
+						<td>2018</td>
+						<td>35.5311</td>
+						<td>139.8894</td>
+					</tr>
+					<tr>
+						<td>From Up on Poppy Hill</td>
+						<td>2011</td>
+						<td>35.4372</td>
+						<td>139.6484</td>
+					</tr>
+					<tr>
+						<td>When Marnie Was There</td>
+						<td>2014</td>
+						<td>43.0739</td>
+						<td>144.3206</td>
+					</tr>
+					<tr>
+						<td>Garden of Words</td>
+						<td>2013</td>
+						<td>35.6852</td>
+						<td>139.7101</td>
+					</tr>
+					<tr>
+						<td>5 Centimeters Per Second</td>
+						<td>2007</td>
+						<td>35.6938</td>
+						<td>139.7034</td>
+					</tr>
+					<tr>
+						<td>My Neighbor Totoro</td>
+						<td>1988</td>
+						<td>35.7994</td>
+						<td>139.4687</td>
+					</tr>
+					<tr>
+						<td>Only Yesterday</td>
+						<td>1982</td>
+						<td>38.5371</td>
+						<td>140.1435</td>
+					</tr>
+				</tbody>
+			</table>
+		</body>
+
+        <br><br>
+
+		<body style="background-color: white">
+		    <h3>Data by tourism to each prefecture</h3>
+			<table border=1>
+				<thead>
+					<tr>
+						<th>Prefecture</th>
+						<th>2017</th>
+						<th>2016</th>
+						<th>2015</th>
+						<th>2014</th>
+						<th>2013</th>
+						<th>2012</th>
+						<th>2011</th>
+						<th>Longitude</th>
+						<th>Latitude</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Aichi Prefecture</td>
+						<td>8.571668693</td>
+						<td>9.507853253</td>
+						<td>10.32515746</td>
+						<td>9.076213572</td>
+						<td>6.911379222</td>
+						<td>8.604232473</td>
+						<td>9.632621177</td>
+						<td>35.0183</td>
+						<td>137.2924</td>
+					</tr>
+					<tr>
+						<td>Akita Prefecture</td>
+						<td>0.296554034</td>
+						<td>0.304207629</td>
+						<td>0.21430633</td>
+						<td>0.28405745</td>
+						<td>0.288262077</td>
+						<td>0.298309112</td>
+						<td>0.281906835</td>
+						<td>40.1376</td>
+						<td>140.3343</td>
+					</tr>
+					<tr>
+						<td>Aomori Prefecture</td>
+						<td>0.546218729</td>
+						<td>0.533415316</td>
+						<td>0.413091002</td>
+						<td>0.599279111</td>
+						<td>0.452553246</td>
+						<td>0.39490242</td>
+						<td>0.400095958</td>
+						<td>40.7657</td>
+						<td>140.9176</td>
+					</tr>
+					<tr>
+						<td>Chiba Prefecture</td>
+						<td>32.43316817</td>
+						<td>35.42410546</td>
+						<td>40.08797256</td>
+						<td>13.44509565</td>
+						<td>11.132054</td>
+						<td>11.25504007</td>
+						<td>9.945017566</td>
+						<td>35.3354</td>
+						<td>140.1833</td>
+					</tr>
+					<tr>
+						<td>Ehime Prefecture</td>
+						<td>0.42806817</td>
+						<td>0.323608079</td>
+						<td>0.319224162</td>
+						<td>0.494846899</td>
+						<td>0.23275546</td>
+						<td>0.293044024</td>
+						<td>0.214468944</td>
+						<td>33.6025</td>
+						<td>132.7858</td>
+					</tr>
+					<tr>
+						<td>Fukui Prefecture</td>
+						<td>0.145320687</td>
+						<td>0.155525825</td>
+						<td>0.08072307</td>
+						<td>0.156845306</td>
+						<td>0.128811692</td>
+						<td>0.159404509</td>
+						<td>0.12654615</td>
+						<td>35.8962</td>
+						<td>136.2112</td>
+					</tr>
+					<tr>
+						<td>Fukuoka Prefecture</td>
+						<td>10.7994748</td>
+						<td>10.61695989</td>
+						<td>10.47824042</td>
+						<td>11.27256257</td>
+						<td>14.12474044</td>
+						<td>12.73418007</td>
+						<td>12.55919266</td>
+						<td>33.5663</td>
+						<td>130.7159</td>
+					</tr>
+					<tr>
+						<td>Fukushima Prefecture</td>
+						<td>0.166342366</td>
+						<td>0.170661146</td>
+						<td>0.196869167</td>
+						<td>0.198634554</td>
+						<td>0.143557548</td>
+						<td>0.191635109</td>
+						<td>0.240193672</td>
+						<td>37.3834</td>
+						<td>140.1833</td>
+					</tr>
+					<tr>
+						<td>Gifu Prefecture</td>
+						<td>2.910891239</td>
+						<td>3.438822948</td>
+						<td>3.189600638</td>
+						<td>3.307268067</td>
+						<td>3.670781912</td>
+						<td>3.287533396</td>
+						<td>2.863973455</td>
+						<td>35.7437</td>
+						<td>136.9805</td>
+					</tr>
+					<tr>
+						<td>Gunma Prefecture</td>
+						<td>0.335593667</td>
+						<td>0.496816099</td>
+						<td>0.411279419</td>
+						<td>0.398409469</td>
+						<td>0.517001455</td>
+						<td>0.531495395</td>
+						<td>0.349017821</td>
+						<td>36.5605</td>
+						<td>138.88</td>
+					</tr>
+					<tr>
+						<td>Hiroshima Prefecture</td>
+						<td>3.017378309</td>
+						<td>3.496313084</td>
+						<td>3.036447458</td>
+						<td>3.402104484</td>
+						<td>2.828570713</td>
+						<td>3.236507233</td>
+						<td>3.56130744</td>
+						<td>34.8823</td>
+						<td>133.0195</td>
+					</tr>
+					<tr>
+						<td>Hokkaido</td>
+						<td>9.242336345</td>
+						<td>9.376986742</td>
+						<td>10.22591743</td>
+						<td>10.6687058</td>
+						<td>12.06433586</td>
+						<td>12.98317108</td>
+						<td>11.72233909</td>
+						<td>43.2203</td>
+						<td>142.8635</td>
+					</tr>
+					<tr>
+						<td>Hyogo Prefecture</td>
+						<td>5.954529555</td>
+						<td>6.615809034</td>
+						<td>7.342119185</td>
+						<td>6.890485631</td>
+						<td>6.726388747</td>
+						<td>6.020531635</td>
+						<td>6.901315669</td>
+						<td>34.858</td>
+						<td>134.5454</td>
+					</tr>
+					<tr>
+						<td>Ibaraki Prefecture</td>
+						<td>0.226296967</td>
+						<td>0.400455165</td>
+						<td>0.354494538</td>
+						<td>0.323430456</td>
+						<td>0.188645765</td>
+						<td>0.317300145</td>
+						<td>0.323641193</td>
+						<td>36.2194</td>
+						<td>140.1833</td>
+					</tr>
+					<tr>
+						<td>Ishikawa Prefecture</td>
+						<td>2.174601411</td>
+						<td>2.401717091</td>
+						<td>2.287328591</td>
+						<td>1.876575642</td>
+						<td>2.344969447</td>
+						<td>1.815823432</td>
+						<td>1.467776738</td>
+						<td>36.326</td>
+						<td>136.529</td>
+					</tr>
+					<tr>
+						<td>Iwate Prefecture</td>
+						<td>0.211483459</td>
+						<td>0.28349978</td>
+						<td>0.160767733</td>
+						<td>0.331189998</td>
+						<td>0.371342879</td>
+						<td>0.301043821</td>
+						<td>0.21563956</td>
+						<td>39.5833</td>
+						<td>141.2535</td>
+					</tr>
+					<tr>
+						<td>Kagawa Prefecture</td>
+						<td>1.023212809</td>
+						<td>0.816103593</td>
+						<td>0.785734681</td>
+						<td>0.870597719</td>
+						<td>0.406208918</td>
+						<td>0.318133357</td>
+						<td>0.528081012</td>
+						<td>34.2226</td>
+						<td>134.0199</td>
+					</tr>
+					<tr>
+						<td>Kagoshima prefecture</td>
+						<td>1.085741143</td>
+						<td>0.894417622</td>
+						<td>1.009521135</td>
+						<td>0.660589793</td>
+						<td>0.930153067</td>
+						<td>0.807393553</td>
+						<td>1.283059093</td>
+						<td>31.3912</td>
+						<td>130.8779</td>
+					</tr>
+					<tr>
+						<td>Kanagawa Prefecture</td>
+						<td>7.454110914</td>
+						<td>9.094417533</td>
+						<td>10.96271142</td>
+						<td>11.79254367</td>
+						<td>10.25528588</td>
+						<td>12.47494226</td>
+						<td>12.25325262</td>
+						<td>35.4914</td>
+						<td>139.2841</td>
+					</tr>
+					<tr>
+						<td>Kochi Prefecture</td>
+						<td>0.139518298</td>
+						<td>0.163697928</td>
+						<td>0.169585593</td>
+						<td>0.188665245</td>
+						<td>0.177355894</td>
+						<td>0.099126748</td>
+						<td>0.065307746</td>
+						<td>33.5481</td>
+						<td>133.2522</td>
+					</tr>
+					<tr>
+						<td>Kumamoto Prefecture</td>
+						<td>2.364242479</td>
+						<td>1.848170865</td>
+						<td>3.781811121</td>
+						<td>4.94929218</td>
+						<td>6.732430699</td>
+						<td>5.649457455</td>
+						<td>4.781218437</td>
+						<td>32.8594</td>
+						<td>130.7969</td>
+					</tr>
+					<tr>
+						<td>Kyoto</td>
+						<td>30.72404233</td>
+						<td>33.18859187</td>
+						<td>30.37094266</td>
+						<td>27.92975671</td>
+						<td>24.9496167</td>
+						<td>23.37978911</td>
+						<td>23.33795094</td>
+						<td>35.0116</td>
+						<td>135.7681</td>
+					</tr>
+					<tr>
+						<td>Mie Prefecture</td>
+						<td>0.474212445</td>
+						<td>0.65761705</td>
+						<td>0.442087405</td>
+						<td>0.547453804</td>
+						<td>0.610782385</td>
+						<td>0.552434748</td>
+						<td>0.504114057</td>
+						<td>33.8144</td>
+						<td>136.0487</td>
+					</tr>
+					<tr>
+						<td>Miyagi Prefecture</td>
+						<td>0.690972356</td>
+						<td>0.769393337</td>
+						<td>0.635381451</td>
+						<td>0.688341707</td>
+						<td>0.817654553</td>
+						<td>0.710471994</td>
+						<td>0.451197244</td>
+						<td>38.6306</td>
+						<td>141.1193</td>
+					</tr>
+					<tr>
+						<td>Miyazaki Prefecture</td>
+						<td>0.369773003</td>
+						<td>0.34604113</td>
+						<td>0.328115258</td>
+						<td>0.268235985</td>
+						<td>0.301080095</td>
+						<td>0.349107674</td>
+						<td>0.557799196</td>
+						<td>32.6036</td>
+						<td>131.4413</td>
+					</tr>
+					<tr>
+						<td>Nagano Prefecture</td>
+						<td>3.121474172</td>
+						<td>3.113722668</td>
+						<td>3.608108339</td>
+						<td>3.50495767</td>
+						<td>4.23610225</td>
+						<td>3.958491043</td>
+						<td>2.658645799</td>
+						<td>36.1544</td>
+						<td>137.9218</td>
+					</tr>
+					<tr>
+						<td>Nagasaki Prefecture</td>
+						<td>2.338802967</td>
+						<td>2.631585925</td>
+						<td>3.007480152</td>
+						<td>3.02236885</td>
+						<td>4.049130991</td>
+						<td>3.690285228</td>
+						<td>2.986714533</td>
+						<td>32.7503</td>
+						<td>129.8779</td>
+					</tr>
+					<tr>
+						<td>Nara Prefecture</td>
+						<td>8.944438805</td>
+						<td>8.410652289</td>
+						<td>6.564687556</td>
+						<td>6.366226167</td>
+						<td>5.947479326</td>
+						<td>4.425623104</td>
+						<td>4.276611538</td>
+						<td>34.2976</td>
+						<td>135.828</td>
+					</tr>
+					<tr>
+						<td>Niigata Prefecture</td>
+						<td>0.615420511</td>
+						<td>0.486393443</td>
+						<td>0.536442893</td>
+						<td>0.548475135</td>
+						<td>0.331685221</td>
+						<td>0.478799885</td>
+						<td>0.323416445</td>
+						<td>37.5178</td>
+						<td>138.927</td>
+					</tr>
+					<tr>
+						<td>Oita Prefecture</td>
+						<td>5.221902898</td>
+						<td>4.572016942</td>
+						<td>5.46227047</td>
+						<td>6.09696646</td>
+						<td>7.668779278</td>
+						<td>6.624556328</td>
+						<td>5.940000096</td>
+						<td>33.2396</td>
+						<td>131.6095</td>
+					</tr>
+					<tr>
+						<td>Okayama Prefecture</td>
+						<td>0.719973136</td>
+						<td>0.882974022</td>
+						<td>0.766051587</td>
+						<td>0.870715396</td>
+						<td>0.583225485</td>
+						<td>0.54769341</td>
+						<td>0.594833381</td>
+						<td>34.8963</td>
+						<td>133.6375</td>
+					</tr>
+					<tr>
+						<td>Okinawa Prefecture</td>
+						<td>8.900567994</td>
+						<td>8.399519287</td>
+						<td>7.843443532</td>
+						<td>6.483088739</td>
+						<td>5.418861957</td>
+						<td>4.769789398</td>
+						<td>4.35221878</td>
+						<td>26.1202</td>
+						<td>127.7025</td>
+					</tr>
+					<tr>
+						<td>Osaka</td>
+						<td>44.05515046</td>
+						<td>44.72528255</td>
+						<td>41.85303513</td>
+						<td>34.1274642</td>
+						<td>30.15250534</td>
+						<td>30.07725954</td>
+						<td>32.40671393</td>
+						<td>34.6413</td>
+						<td>135.5629</td>
+					</tr>
+					<tr>
+						<td>Saga Prefecture</td>
+						<td>0.715633132</td>
+						<td>0.94164058</td>
+						<td>0.595157203</td>
+						<td>0.484961988</td>
+						<td>0.689459505</td>
+						<td>0.508882467</td>
+						<td>0.453954894</td>
+						<td>33.3078</td>
+						<td>130.2271</td>
+					</tr>
+					<tr>
+						<td>Saitama Prefecture</td>
+						<td>0.454212946</td>
+						<td>0.664472355</td>
+						<td>0.617706797</td>
+						<td>0.789364918</td>
+						<td>0.624314717</td>
+						<td>0.70374983</td>
+						<td>0.709285624</td>
+						<td>35.9963</td>
+						<td>139.4466</td>
+					</tr>
+					<tr>
+						<td>Shiga Prefecture</td>
+						<td>0.546784288</td>
+						<td>0.550003426</td>
+						<td>0.584774002</td>
+						<td>0.627735244</td>
+						<td>0.494824538</td>
+						<td>0.344551254</td>
+						<td>0.575558541</td>
+						<td>35.3292</td>
+						<td>136.0563</td>
+					</tr>
+					<tr>
+						<td>Shimane Prefecture</td>
+						<td>0.105997523</td>
+						<td>0.248081141</td>
+						<td>0.154642664</td>
+						<td>0.160548944</td>
+						<td>0.132000543</td>
+						<td>0.143894732</td>
+						<td>0.126339143</td>
+						<td>35.1244</td>
+						<td>132.6293</td>
+					</tr>
+					<tr>
+						<td>Shizuoka Prefecture</td>
+						<td>5.00399191</td>
+						<td>5.739087508</td>
+						<td>5.974130994</td>
+						<td>4.750724342</td>
+						<td>1.726235709</td>
+						<td>2.699174984</td>
+						<td>2.729467881</td>
+						<td>35.0929</td>
+						<td>138.319</td>
+					</tr>
+					<tr>
+						<td>Tochigi Prefecture</td>
+						<td>1.137546192</td>
+						<td>1.229688289</td>
+						<td>1.095259651</td>
+						<td>1.654198193</td>
+						<td>1.618072489</td>
+						<td>1.459697633</td>
+						<td>1.537908154</td>
+						<td>36.6715</td>
+						<td>139.8547</td>
+					</tr>
+					<tr>
+						<td>Tokushima Prefecture</td>
+						<td>0.239779274</td>
+						<td>0.115630036</td>
+						<td>0.259664126</td>
+						<td>0.224000786</td>
+						<td>0.180763344</td>
+						<td>0.186477752</td>
+						<td>0.118586834</td>
+						<td>33.942</td>
+						<td>134.3237</td>
+					</tr>
+					<tr>
+						<td>Tokyo</td>
+						<td>41.07256662</td>
+						<td>44.46722061</td>
+						<td>48.19020228</td>
+						<td>48.52195957</td>
+						<td>43.22644174</td>
+						<td>50.48726228</td>
+						<td>49.83915036</td>
+						<td>35.6762</td>
+						<td>139.6503</td>
+					</tr>
+					<tr>
+						<td>Tottori Prefecture</td>
+						<td>0.229983463</td>
+						<td>0.308909979</td>
+						<td>0.182707289</td>
+						<td>0.194137579</td>
+						<td>0.153529018</td>
+						<td>0.183421794</td>
+						<td>0.11464069</td>
+						<td>35.3573</td>
+						<td>133.4067</td>
+					</tr>
+					<tr>
+						<td>Toyama Prefecture</td>
+						<td>1.150898134</td>
+						<td>1.31682279</td>
+						<td>1.749833071</td>
+						<td>1.666805596</td>
+						<td>1.687346463</td>
+						<td>1.53886327</td>
+						<td>1.583130664</td>
+						<td>36.6958</td>
+						<td>137.2137</td>
+					</tr>
+					<tr>
+						<td>Wakayama Prefecture</td>
+						<td>1.376951681</td>
+						<td>1.431527603</td>
+						<td>1.440507609</td>
+						<td>1.870830318</td>
+						<td>1.802326927</td>
+						<td>1.423396167</td>
+						<td>1.518764282</td>
+						<td>33.9481</td>
+						<td>135.3745</td>
+					</tr>
+					<tr>
+						<td>Yamagata Prefecture</td>
+						<td>0.283368105</td>
+						<td>0.281425751</td>
+						<td>0.166487557</td>
+						<td>0.296216509</td>
+						<td>0.312901196</td>
+						<td>0.143263969</td>
+						<td>0.150516898</td>
+						<td>38.5371</td>
+						<td>140.1435</td>
+					</tr>
+					<tr>
+						<td>Yamaguchi Prefecture</td>
+						<td>0.862142689</td>
+						<td>0.87363043</td>
+						<td>0.688464589</td>
+						<td>0.220184044</td>
+						<td>0.153084046</td>
+						<td>0.263547038</td>
+						<td>0.1267028</td>
+						<td>34.2797</td>
+						<td>131.5213</td>
+					</tr>
+					<tr>
+						<td>Yamanashi Prefecture</td>
+						<td>6.274849866</td>
+						<td>6.773684625</td>
+						<td>8.0066143</td>
+						<td>6.192362943</td>
+						<td>7.38824966</td>
+						<td>8.518342088</td>
+						<td>7.160769519</td>
+						<td>35.6635</td>
+						<td>138.6389</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>&nbsp</td>
+						<td>&nbsp</td>
+						<td>&nbsp</td>
+						<td>&nbsp</td>
+						<td>&nbsp</td>
+						<td>&nbsp</td>
+						<td>&nbsp</td>
+						<td>&nbsp</td>
+						<td>&nbsp</td>
+					</tr>
+				</tbody>
+			</table>
+			</div>
+            </form>
+		</body>
+	</html>
+{% endblock %}
