@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Tourism
+{% endblock %}
+
+{% block main %}
+
+    <div class="card" style="width: 65rem; background:rgba(255,255,255,0.9)">
+
+    <div class="card-body">
+    <h3 class="card-title">Media Tourism Map</h3>
+
+    <div class="dropdown">
+
+    <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Select year
+    </button>
+
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">2017</a>
+        <a class="dropdown-item" href="#">2016</a>
+        <a class="dropdown-item" href="#">2015</a>
+        <a class="dropdown-item" href="#">2014</a>
+        <a class="dropdown-item" href="#">2013</a>
+        </div>
+
+    </div>
+    </div>
+    </div>
+
+{% endblock %}

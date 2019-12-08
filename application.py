@@ -34,13 +34,16 @@ list = []
 
 # db = SQL("TODO")
 
-folium_map = folium.Map(location = [34.6937, 135.5023], zoom_start = 7)
+folium_map = folium.Map(location = [34.6937, 135.5023], zoom_start = 7, tiles="CartoDB dark_matter")
 
 @app.route("/", methods = ["GET"])
 def choose_std():
     return render_template("standard.html")
 
 @app.route("/year")
+def template():
+    return render_template("tourism.html")
+
 def initialmap():
     # folium.Marker(
     # location=[35.6762, 139.6503],
