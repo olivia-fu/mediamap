@@ -16,6 +16,11 @@
         <link href="static/styles.css" rel="stylesheet">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
+        <script src="jquery.js"></script>
+        <script>
+            $(function(){$("#includedContent").load("my_map.html");});
+        </script>
+
         <title>{% block title %}{% endblock %}</title>
 
     </head>
