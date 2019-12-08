@@ -8,9 +8,10 @@
     <form action="/" method="post">
         <div class="form-group">
             <select class="form-control" name="symbol">
-                <option disabled selected value="">By movie</option>
+                <option disabled selected value="">How should we categorize?</option>
                 {% for entry in options%}
-                    <option value = {{entry["symbol"]}}>{{entry["symbol"]}}</option>
+                    <option>By movie</option>
+                    <option>By year</option>
                 {% endfor %}
             </select>
         </div>

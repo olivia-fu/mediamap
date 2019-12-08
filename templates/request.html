@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Request for more information
+{% endblock %}
+
+{% block main %}
+    <form action="/request">
+        What other kinds of information would you like to see?
+        <div class="form-group">
+            <input class="form-control" name="comment" placeholder="Comment" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Contribute</button>
+    </form>
+{% endblock %}

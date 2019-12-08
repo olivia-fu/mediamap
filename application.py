@@ -30,6 +30,8 @@ app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
+list = []
+
 # db = SQL("TODO")
 
 folium_map = folium.Map(location = [34.6937, 135.5023], zoom_start = 7)
@@ -61,3 +63,16 @@ def initialmap():
 
     folium_map.save("templates/my_map.html")
     return render_template("my_map.html")
+
+@app.route("/request", methods=["GET", "POST"])
+def moreinfo():
+    if request.method == "GET":
+        return render_template("request.html")
+    else:
+        comment = request.form.get("comment")
+        if not comment:
+            return redirect("/")
+        list.append(comment)
+        return render_template("request.html",comment = comment)
+
+        # maybe we could add the comment to the upcoming list under comments and people can like/hate it depending on what
