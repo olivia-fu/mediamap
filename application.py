@@ -13,7 +13,6 @@ from werkzeug.exceptions import default_exceptions, HTTPException, InternalServe
 from werkzeug.security import check_password_hash, generate_password_hash
 
 todos = []
-
 actualyear = 0
 
 app = Flask(__name__)
@@ -44,48 +43,12 @@ def template():
         return render_template("tourism.html")
     else:
         tyear = request.form.get("year")
-        actualyear = tyear
+        actualyear = int(tyear)
+        print(actualyear)
+        return redirect("/map")
 
-        # if tyear == "2016":
-        #     for index, row in tourist_data.iterrows():
-        #         folium.CircleMarker(
-        #             location=[float(row['Longitude']), float(row['Latitude'])],
-        #             popup=row[tyear],
-        #             radius=3*row[tyear],
-        #             color='#cc3131',
-        #             fill=True if while == "2016",
-        #             fill_color='#cc3131').add_to(folium_map)
-        #     folium_map.save("templates/my_map.html")
-        #     return render_template("my_map.html")
-
-        # if tyear == "2015":
-        #     for index, row in tourist_data.iterrows():
-        #         folium.CircleMarker(
-        #             location=[float(row['Longitude']), float(row['Latitude'])],
-        #             popup=row[tyear],
-        #             radius=3*row[tyear],
-        #             color='#31cc55',
-        #             fill=True while tyear == "2015",
-        #             fill_color='#31cc55').add_to(folium_map)
-        #     folium_map.save("templates/my_map.html")
-        #     return render_template("my_map.html")
-
-        # if tyear == "2014":
-        #     for index, row in tourist_data.iterrows():
-        #         folium.CircleMarker(
-        #             location=[float(row['Longitude']), float(row['Latitude'])],
-        #             popup=row[tyear],
-        #             radius=3*row[tyear],
-        #             color='#cc31b5',
-        #             fill=True while tyear == "2014",
-        #             fill_color='#cc31b5').add_to(folium_map)
-        #     folium_map.save("templates/my_map.html")
-        # folium_map.save("templates/my_map.html")
-        return render_template("my_map.html")
-        #     return render_template("my_map.html")
-
-@app.route("/map", methods = ["GET"])
-def resultmap():
+@app.route("/map2017", methods = ["GET"])
+def resultmap2017():
     film_data = pd.read_csv("film.csv")
     film_data = film_data.dropna()
     film_data.head()
@@ -100,30 +63,124 @@ def resultmap():
     tourist_data = tourist_data.dropna()
     tourist_data.head()
 
-    if actualyear == 2017:
-        for index, row in tourist_data.iterrows():
-            folium.CircleMarker(
-                location=[float(row['Longitude']), float(row['Latitude'])],
-                popup=row['Prefecture'],
-                radius=3*row['2017'],
-                color='#3186cc',
-                fill=True,
-                fill_color='#3186cc').add_to(folium_map)
-        folium_map.save("templates/my_map.html")
-        return render_template("my_map.html")
+    for index, row in tourist_data.iterrows():
+        folium.CircleMarker(
+            location=[float(row['Longitude']), float(row['Latitude'])],
+            popup=row['Prefecture'],
+            radius=3*row['2017'],
+            color='#3186cc',
+            fill=True,
+            fill_color='#3186cc').add_to(folium_map)
+    folium_map.save("templates/my_map.html")
+    return render_template("my_map.html")
 
-    if actualyear == 2016:
-        for index, row in tourist_data.iterrows():
-            folium.CircleMarker(
-                location=[float(row['Longitude']), float(row['Latitude'])],
-                popup=row['Prefecture'],
-                radius=3*row['2016'],
-                color='#cc3131',
-                fill=True,
-                fill_color='#cc3131').add_to(folium_map)
-        folium_map.save("templates/my_map.html")
-        return render_template("my_map.html")
+@app.route("/map2016", methods = ["GET"])
+def resultmap2016():
+    film_data = pd.read_csv("film.csv")
+    film_data = film_data.dropna()
+    film_data.head()
 
+    for index, row in film_data.iterrows():
+        folium.Marker(
+            location=[float(row['Longitude']),float(row['Latitude'])],
+            popup = row['Film'],
+            icon=folium.Icon(color='red', icon='info-sign')).add_to(folium_map)
+
+    tourist_data = pd.read_csv("Visit Rate Ranking.csv")
+    tourist_data = tourist_data.dropna()
+    tourist_data.head()
+
+    for index, row in tourist_data.iterrows():
+        folium.CircleMarker(
+            location=[float(row['Longitude']), float(row['Latitude'])],
+            popup=row['Prefecture'],
+            radius=3*row['2016'],
+            color='#3186cc',
+            fill=True,
+            fill_color='#3186cc').add_to(folium_map)
+    folium_map.save("templates/my_map.html")
+    return render_template("my_map.html")
+
+@app.route("/map2015", methods = ["GET"])
+def resultmap2015():
+    film_data = pd.read_csv("film.csv")
+    film_data = film_data.dropna()
+    film_data.head()
+
+    for index, row in film_data.iterrows():
+        folium.Marker(
+            location=[float(row['Longitude']),float(row['Latitude'])],
+            popup = row['Film'],
+            icon=folium.Icon(color='red', icon='info-sign')).add_to(folium_map)
+
+    tourist_data = pd.read_csv("Visit Rate Ranking.csv")
+    tourist_data = tourist_data.dropna()
+    tourist_data.head()
+
+    for index, row in tourist_data.iterrows():
+        folium.CircleMarker(
+            location=[float(row['Longitude']), float(row['Latitude'])],
+            popup=row['Prefecture'],
+            radius=3*row['2015'],
+            color='#3186cc',
+            fill=True,
+            fill_color='#3186cc').add_to(folium_map)
+    folium_map.save("templates/my_map.html")
+    return render_template("my_map.html")
+
+@app.route("/map2014", methods = ["GET"])
+def resultmap2014():
+    film_data = pd.read_csv("film.csv")
+    film_data = film_data.dropna()
+    film_data.head()
+
+    for index, row in film_data.iterrows():
+        folium.Marker(
+            location=[float(row['Longitude']),float(row['Latitude'])],
+            popup = row['Film'],
+            icon=folium.Icon(color='red', icon='info-sign')).add_to(folium_map)
+
+    tourist_data = pd.read_csv("Visit Rate Ranking.csv")
+    tourist_data = tourist_data.dropna()
+    tourist_data.head()
+
+    for index, row in tourist_data.iterrows():
+        folium.CircleMarker(
+            location=[float(row['Longitude']), float(row['Latitude'])],
+            popup=row['Prefecture'],
+            radius=3*row['2014'],
+            color='#3186cc',
+            fill=True,
+            fill_color='#3186cc').add_to(folium_map)
+    folium_map.save("templates/my_map.html")
+    return render_template("my_map.html")
+
+@app.route("/map2013", methods = ["GET"])
+def resultmap2013():
+    film_data = pd.read_csv("film.csv")
+    film_data = film_data.dropna()
+    film_data.head()
+
+    for index, row in film_data.iterrows():
+        folium.Marker(
+            location=[float(row['Longitude']),float(row['Latitude'])],
+            popup = row['Film'],
+            icon=folium.Icon(color='red', icon='info-sign')).add_to(folium_map)
+
+    tourist_data = pd.read_csv("Visit Rate Ranking.csv")
+    tourist_data = tourist_data.dropna()
+    tourist_data.head()
+
+    for index, row in tourist_data.iterrows():
+        folium.CircleMarker(
+            location=[float(row['Longitude']), float(row['Latitude'])],
+            popup=row['Prefecture'],
+            radius=3*row['2013'],
+            color='#3186cc',
+            fill=True,
+            fill_color='#3186cc').add_to(folium_map)
+    folium_map.save("templates/my_map.html")
+    return render_template("my_map.html")
 
 @app.route("/request", methods=["GET"])
 def moreinfo():
