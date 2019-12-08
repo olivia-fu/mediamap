@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Choose!
+{% endblock %}
+
+{% block main %}
+    <form action="/" method="post">
+        <div class="form-group">
+            <select class="form-control" name="symbol">
+                <option disabled selected value="">By movie</option>
+                {% for entry in options%}
+                    <option value = {{entry["symbol"]}}>{{entry["symbol"]}}</option>
+                {% endfor %}
+            </select>
+            <select class="form-control" name="symbol">
+                <option disabled selected value="">By year</option>
+                {% for entry in options%}
+                    <option value = {{entry["symbol"]}}>{{entry["symbol"]}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class = "form-group">
+            <input autocomplete="off" autofocus class="form-control" min="0" name="standard" placeholder="Choice" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">See Map</button>
+    </form>
+{% endblock %}
