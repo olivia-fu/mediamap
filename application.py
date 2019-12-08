@@ -32,12 +32,7 @@ app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
-<<<<<<< HEAD
-folium_parameters = { 'location': [34.6937, 135.5023], 'zoom_start' : 5, 'width': 1200, 'height': 1200 }
-folium_map = folium.Map(**folium_parameters)
-=======
 folium_map = folium.Map(location= [34.6937, 135.5023], zoom_start= 7)
->>>>>>> d852fe0b9d9b376f9d161237ff381141dfa5ea3c
 
 @app.route("/", methods = ["GET"])
 def choose_std():
@@ -49,9 +44,6 @@ def template():
         return render_template("tourism.html")
     else:
         tyear = request.form.get("year")
-<<<<<<< HEAD
-        print(tyear)
-=======
         actualyear = tyear
 
         # if tyear == "2016":
@@ -103,7 +95,6 @@ def resultmap():
             location=[float(row['Longitude']),float(row['Latitude'])],
             popup = row['Film'],
             icon=folium.Icon(color='red', icon='info-sign')).add_to(folium_map)
->>>>>>> d852fe0b9d9b376f9d161237ff381141dfa5ea3c
 
     tourist_data = pd.read_csv("Visit Rate Ranking.csv")
     tourist_data = tourist_data.dropna()
