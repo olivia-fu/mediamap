@@ -8,6 +8,7 @@
     <div class="card" style="width: 65rem; background:rgba(255,255,255,0.9)">
 
     <div class="card-body">
+
     <h5 class="card-title">Thanks for visiting!</h5>
 
     <form action="/request">
@@ -15,16 +16,15 @@
     <div class="form-group">
         <input class="form-control" name="comment" placeholder="Type here" type="text">
     </div>
-    <button class="btn btn-primary" type="submit">Submit</button>
+    <a href="/request">Request</a>
     </form>
-    </div>
-
-    <h1>Upcoming Updates</h1>
+    <h5 class = "card-title">Previous comments</h5>
     <ul>
         {% for todo in todos %}
             <li>{{todo}}</li>
         {% endfor %}
     </ul>
+    </div>
 
     </div>
 {% endblock %}
